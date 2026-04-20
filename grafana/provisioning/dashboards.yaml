@@ -1,0 +1,13 @@
+apiVersion: 1
+
+providers:
+  - name: default
+    orgId: 1
+    folder: ''
+    type: file
+    disableDeletion: false         # true면 파일 삭제해도 Grafana에서 삭제 안됨
+    updateIntervalSeconds: 30      # 변경 감지 주기
+    allowUiUpdates: false          # UI 수정 후 재시작 시 파일 내용으로 덮어씌워짐
+    options:
+      path: /var/lib/grafana/dashboards/default
+      foldersFromFilesStructure: true   # 하위 폴더 구조를 Grafana 폴더로 매핑
