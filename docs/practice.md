@@ -28,7 +28,7 @@ kubectl create secret generic grafana-admin \
 # Grafana 설치
 helm install grafana grafana/grafana \
   --namespace monitoring \
-  --values grafana/values.yaml \
+  --values ../ops/config/grafana/values.yaml \
   --wait
 
 # 설치 확인
@@ -280,10 +280,10 @@ DASHBOARD_UID=$(curl -s http://admin:grafana123@localhost:3000/api/search?query=
 
 curl -s http://admin:grafana123@localhost:3000/api/dashboards/uid/${DASHBOARD_UID} | \
   jq '.dashboard | del(.id, .version)' \
-  > grafana/provisioning/dashboards/my-app-overview.json
+  > ../ops/config/grafana/provisioning/dashboards/my-app-overview.json
 
 # Git 커밋
-git add grafana/provisioning/dashboards/my-app-overview.json
+git add ../ops/config/grafana/provisioning/dashboards/my-app-overview.json
 git commit -m "feat: add My App Overview dashboard"
 ```
 

@@ -25,7 +25,7 @@ Grafana 파드 시작 시 이 파일들을 읽어 자동으로 적용합니다.
 ## 1. 데이터소스 Provisioning
 
 ```yaml
-# grafana/provisioning/datasources.yaml
+# ../ops/config/grafana/provisioning/datasources.yaml
 apiVersion: 1
 
 datasources:
@@ -97,7 +97,7 @@ datasources:
 ### 단계 1: 대시보드 프로바이더 설정
 
 ```yaml
-# grafana/provisioning/dashboards.yaml
+# ../ops/config/grafana/provisioning/dashboards.yaml
 apiVersion: 1
 
 providers:
@@ -117,7 +117,7 @@ providers:
 # 기존 대시보드 JSON 내보내기
 curl -s http://admin:admin@localhost:3000/api/dashboards/uid/<UID> | \
   jq '.dashboard | del(.id, .version)' \
-  > grafana/provisioning/dashboards/my-dashboard.json
+  > ../ops/config/grafana/provisioning/dashboards/my-dashboard.json
 ```
 
 > `id`와 `version` 필드를 제거해야 Provisioning 시 충돌이 없습니다.
@@ -129,7 +129,7 @@ curl -s http://admin:admin@localhost:3000/api/dashboards/uid/<UID> | \
 Grafana Helm Chart는 `datasources`와 `dashboardProviders` 값을 ConfigMap으로 자동 변환합니다.
 
 ```yaml
-# grafana/values.yaml (발췌)
+# ../ops/config/grafana/values.yaml (발췌)
 grafana.ini:
   server:
     root_url: http://grafana.monitoring.svc.cluster.local
@@ -193,7 +193,7 @@ dashboards:
 ## 4. Alert Rule Provisioning
 
 ```yaml
-# grafana/provisioning/alerting/alert-rules.yaml
+# ../ops/config/grafana/provisioning/alerting/alert-rules.yaml
 apiVersion: 1
 
 groups:
@@ -241,7 +241,7 @@ groups:
 ## 5. Contact Point Provisioning
 
 ```yaml
-# grafana/provisioning/alerting/contact-points.yaml
+# ../ops/config/grafana/provisioning/alerting/contact-points.yaml
 apiVersion: 1
 
 contactPoints:
@@ -328,10 +328,10 @@ kubectl apply -f k8s/grafana-dashboards-configmap.yaml
 ```
 Git Repository
     │
-    ├── grafana/provisioning/datasources.yaml
-    ├── grafana/provisioning/dashboards.yaml
-    ├── grafana/provisioning/dashboards/*.json
-    └── grafana/values.yaml
+    ├── ../ops/config/grafana/provisioning/datasources.yaml
+    ├── ../ops/config/grafana/provisioning/dashboards.yaml
+    ├── ../ops/config/grafana/provisioning/dashboards/*.json
+    └── ../ops/config/grafana/values.yaml
           │
           ▼ ArgoCD / Flux
     Helm release 자동 업데이트

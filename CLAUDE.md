@@ -16,11 +16,12 @@ grafana-practice/
 ├── .claude/
 │   ├── settings.json
 │   └── commands/              # /new-doc, /new-runbook, /review-doc, /add-troubleshooting, /search-kb
-├── agents/                    # doc-writer, dashboard-designer, alerting-advisor, troubleshooter
-├── templates/                 # service-doc, runbook, incident-report
-├── rules/                     # doc-writing, grafana-conventions, security-checklist, monitoring
-├── grafana/                   # 대시보드 JSON, provisioning 설정
-└── *-guide.md                 # 주제별 가이드 문서
+├── docs/                      # 주제별 가이드 문서, agents/rules/templates
+│   ├── agents/                # doc-writer, dashboard-designer, alerting-advisor, troubleshooter
+│   ├── templates/             # service-doc, runbook, incident-report
+│   └── rules/                 # doc-writing, grafana-conventions, security-checklist, monitoring
+└── ops/
+    └── config/grafana/        # 대시보드 JSON, provisioning 설정
 ```
 
 ---
@@ -31,7 +32,7 @@ grafana-practice/
 |--------|------|---------|
 | `/new-doc` | 새 가이드 문서 생성 | `/new-doc grafana-oncall-integration` |
 | `/new-runbook` | 새 런북 생성 | `/new-runbook 대시보드 패널 No Data 대응` |
-| `/review-doc` | 문서 검토 | `/review-doc dashboard-design-guide.md` |
+| `/review-doc` | 문서 검토 | `/review-doc docs/dashboard-design-guide.md` |
 | `/add-troubleshooting` | 트러블슈팅 케이스 추가 | `/add-troubleshooting 데이터소스 연결 실패` |
 | `/search-kb` | 지식베이스 검색 | `/search-kb Grafana 알림 라우팅` |
 
@@ -41,20 +42,20 @@ grafana-practice/
 
 | 문서 | 주제 |
 |------|------|
-| `install.md` | Grafana 설치 (Helm + EKS) |
-| `datasource-guide.md` | 데이터소스 설정 (Prometheus, Loki, Tempo) |
-| `dashboard-guide.md` | 대시보드 기본 사용법 |
-| `dashboard-design-guide.md` | 대시보드 설계 패턴 |
-| `variable-guide.md` | 대시보드 변수(Variables) |
-| `provisioning-guide.md` | 대시보드 프로비저닝 (ConfigMap) |
-| `alerting-guide.md` | Grafana Unified Alerting |
-| `explore-guide.md` | Explore 기능 활용 |
-| `logql-guide.md` | LogQL (Explore + Loki) |
-| `promql-guide.md` | PromQL (Explore + Prometheus) |
-| `slo-guide.md` | SLO 대시보드 구성 |
-| `performance-analysis-guide.md` | 성능 분석 대시보드 |
-| `useful-dashboards.md` | 유용한 커뮤니티 대시보드 |
-| `oncall-runbook.md` | OnCall 런북 |
+| `docs/install.md` | Grafana 설치 (Helm + EKS) |
+| `docs/datasource-guide.md` | 데이터소스 설정 (Prometheus, Loki, Tempo) |
+| `docs/dashboard-guide.md` | 대시보드 기본 사용법 |
+| `docs/dashboard-design-guide.md` | 대시보드 설계 패턴 |
+| `docs/variable-guide.md` | 대시보드 변수(Variables) |
+| `docs/provisioning-guide.md` | 대시보드 프로비저닝 (ConfigMap) |
+| `docs/alerting-guide.md` | Grafana Unified Alerting |
+| `docs/explore-guide.md` | Explore 기능 활용 |
+| `docs/logql-guide.md` | LogQL (Explore + Loki) |
+| `docs/promql-guide.md` | PromQL (Explore + Prometheus) |
+| `docs/slo-guide.md` | SLO 대시보드 구성 |
+| `docs/performance-analysis-guide.md` | 성능 분석 대시보드 |
+| `docs/useful-dashboards.md` | 유용한 커뮤니티 대시보드 |
+| `docs/oncall-runbook.md` | OnCall 런북 |
 
 ---
 
