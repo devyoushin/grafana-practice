@@ -159,3 +159,24 @@ kubectl delete pvc -n monitoring -l app.kubernetes.io/name=grafana
 | `admin-password` 인식 안됨 | Secret 키 이름 불일치 | `userKey`, `passwordKey` 값 확인 |
 | 데이터소스 `Bad Gateway` | 서비스 이름 오타 | `kubectl get svc -n monitoring` 으로 실제 서비스 이름 확인 |
 | 대시보드 프로비저닝 안됨 | ConfigMap 마운트 실패 | `kubectl describe pod grafana-xxx -n monitoring` 이벤트 확인 |
+
+
+---
+
+## systemd 설치
+
+Kubernetes 없이 단일 VM이나 베어메탈에서 돌릴 때는 바이너리를 내려받아 systemd로 관리합니다.
+
+1. 바이너리 또는 패키지를 설치합니다.
+2. 설정 파일을 /etc/<component>/ 아래에 둡니다.
+3. `systemctl enable --now <service>`로 등록합니다.
+4. `journalctl -u <service> -f`로 로그를 확인합니다.
+
+## Docker Compose 설치
+
+로컬 개발이나 빠른 검증은 Docker Compose가 가장 간단합니다.
+
+1. `compose.yaml`을 만들고 이미지, 포트, 볼륨을 정의합니다.
+2. `docker compose up -d`로 올립니다.
+3. `docker compose logs -f`와 `docker compose ps`로 상태를 확인합니다.
+4. 개발용은 같은 설정을 유지하되, 운영용은 Helm 또는 systemd를 사용합니다.

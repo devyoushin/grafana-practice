@@ -4,7 +4,7 @@ Grafana 문서는 학습 문서, 규칙, 템플릿, 에이전트 프롬프트를
 
 | 폴더/문서 | 내용 |
 |------|------|
-| `install.md` | Helm 기반 Grafana 설치 |
+| `install.md` | Helm, systemd, Docker Compose 설치 |
 | `datasource-guide.md` | Prometheus/Mimir, Loki, Tempo 데이터소스 |
 | `dashboard-guide.md`, `dashboard-design-guide.md` | 대시보드 생성과 설계 원칙 |
 | `variable-guide.md` | 템플릿 변수와 동적 대시보드 |
