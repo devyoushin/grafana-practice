@@ -12,7 +12,7 @@ Grafana를 처음 보는 사람이 설치부터 대시보드 운영까지 따라
 | 4 | `variable-guide.md`, `useful-dashboards.md` | 템플릿 변수와 자주 쓰는 대시보드 |
 | 5 | `promql-guide.md`, `logql-guide.md`, `explore-guide.md` | 탐색과 쿼리 |
 | 6 | `alerting-guide.md`, `provisioning-guide.md` | 알림과 GitOps 프로비저닝 |
-| 7 | `slo-guide.md`, `oncall-runbook.md`, `performance-analysis-guide.md` | SLO와 장애 대응 |
+| 7 | `ha-lb-systemd-docker-guide.md`, `slo-guide.md`, `oncall-runbook.md`, `performance-analysis-guide.md` | 일반 서버 HA/LB, SLO와 장애 대응 |
 | 8 | `rules/README.md` | 문서와 운영 규칙 |
 | 9 | `agents/README.md` | AI 작업 지침 |
 | 10 | `templates/README.md` | 문서 템플릿 |
@@ -25,7 +25,7 @@ Grafana를 처음 보는 사람이 설치부터 대시보드 운영까지 따라
 | 설치/기초 | `install.md`, `datasource-guide.md` |
 | 대시보드 | `dashboard-guide.md`, `dashboard-design-guide.md`, `variable-guide.md`, `useful-dashboards.md` |
 | 쿼리/탐색 | `promql-guide.md`, `logql-guide.md`, `explore-guide.md` |
-| 운영 | `alerting-guide.md`, `provisioning-guide.md`, `slo-guide.md`, `oncall-runbook.md` |
+| 운영 | `alerting-guide.md`, `provisioning-guide.md`, `ha-lb-systemd-docker-guide.md`, `slo-guide.md`, `oncall-runbook.md` |
 | 보조 자료 | `rules/`, `agents/`, `templates/` |
 
 ## 읽는 순서
@@ -38,10 +38,11 @@ Grafana를 처음 보는 사람이 설치부터 대시보드 운영까지 따라
 6. `explore-guide.md`
 7. `alerting-guide.md`
 8. `provisioning-guide.md`
-9. `slo-guide.md`
-10. `rules/README.md`
-11. `agents/README.md`
-12. `templates/README.md`
+9. `ha-lb-systemd-docker-guide.md`
+10. `slo-guide.md`
+11. `rules/README.md`
+12. `agents/README.md`
+13. `templates/README.md`
 
 ## 관련 경로
 
