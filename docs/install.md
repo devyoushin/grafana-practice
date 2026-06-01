@@ -7,7 +7,7 @@
 | 방식 | 문서 | 설명 |
 |------|------|------|
 | Helm | `install-helm.md` | EKS 기준 Grafana 설치 |
-| systemd | `install-systemd.md` | 단일 VM/베어메탈에서 `grafana-server` 서비스 관리 |
+| systemd | `install-systemd.md` | RPM 또는 tarball로 설치 후 `grafana-server` 서비스 관리 |
 | Docker Compose | `install-docker-compose.md` | 로컬 개발이나 provisioning 검증용 |
 
 ## 읽는 순서
