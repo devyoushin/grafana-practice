@@ -24,7 +24,7 @@ kubectl create secret generic grafana-admin \
 ## values 준비
 
 ```bash
-cp ../ops/config/grafana/values.yaml my-values.yaml
+cp ../../ops/config/grafana/values.yaml my-values.yaml
 ```
 
 ## 설치
