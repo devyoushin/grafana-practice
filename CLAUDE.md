@@ -42,7 +42,7 @@ grafana-practice/
 
 | 문서 | 주제 |
 |------|------|
-| `docs/install/install.md` | Grafana 설치 (Helm + EKS) |
+| `docs/01-installation/install.md` | Grafana 설치 (Helm + EKS) |
 | `docs/datasource-guide.md` | 데이터소스 설정 (Prometheus, Loki, Tempo) |
 | `docs/dashboard-guide.md` | 대시보드 기본 사용법 |
 | `docs/dashboard-design-guide.md` | 대시보드 설계 패턴 |

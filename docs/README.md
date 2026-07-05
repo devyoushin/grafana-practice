@@ -1,54 +1,19 @@
 # Grafana Docs
 
-Grafana를 처음 보는 사람이 설치부터 대시보드 운영까지 따라갈 수 있도록 문서를 묶어 둔 디렉터리다.
-
-## 어디서 시작할까
-
-| 순서 | 문서 | 용도 |
-|------|------|------|
-| 1 | `install/install.md` | Helm, systemd, Docker Compose 설치 방식 |
-| 2 | `install/upgrade/` | Grafana 업그레이드 |
-| 3 | `datasource-guide.md` | Prometheus/Mimir, Loki, Tempo 데이터소스 |
-| 4 | `dashboard-guide.md`, `dashboard-design-guide.md` | 대시보드 생성과 설계 원칙 |
-| 5 | `variable-guide.md`, `useful-dashboards.md` | 템플릿 변수와 자주 쓰는 대시보드 |
-| 6 | `promql-guide.md`, `logql-guide.md`, `explore-guide.md` | 탐색과 쿼리 |
-| 7 | `alerting-guide.md`, `provisioning-guide.md` | 알림과 GitOps 프로비저닝 |
-| 8 | `ha-lb-systemd-docker-guide.md`, `slo-guide.md`, `oncall-runbook.md`, `performance-analysis-guide.md` | 일반 서버 HA/LB, SLO와 장애 대응 |
-| 9 | `rules/README.md` | 문서와 운영 규칙 |
-| 10 | `agents/README.md` | AI 작업 지침 |
-| 11 | `templates/README.md` | 문서 템플릿 |
-| 12 | `../ops/README.md` | 실제 실행 자산과 운영 방법 |
+이 디렉터리는 목적별 번호 폴더로 문서를 관리합니다. 앞의 번호는 권장 학습 및 운영 참조 순서를 나타냅니다.
 
 ## 문서 구조
 
-| 구분 | 문서 |
+| 폴더 | 내용 |
 |------|------|
-| 설치/기초 | `install/install.md`, `install/upgrade/`, `datasource-guide.md` |
-| 대시보드 | `dashboard-guide.md`, `dashboard-design-guide.md`, `variable-guide.md`, `useful-dashboards.md` |
-| 쿼리/탐색 | `promql-guide.md`, `logql-guide.md`, `explore-guide.md` |
-| 운영 | `alerting-guide.md`, `provisioning-guide.md`, `ha-lb-systemd-docker-guide.md`, `slo-guide.md`, `oncall-runbook.md` |
-| 보조 자료 | `rules/`, `agents/`, `templates/` |
+| `01-installation/` | Grafana 설치와 업그레이드 절차를 다룹니다. |
+| `02-datasources-explore/` | datasource, Explore, PromQL, LogQL 사용법을 다룹니다. |
+| `03-dashboards/` | dashboard 설계, 변수, 유용한 dashboard 패턴을 다룹니다. |
+| `04-alerting-slo/` | alerting, on-call, SLO 운영 기준을 다룹니다. |
+| `05-operations/` | provisioning, 성능 분석, HA/LB 운영을 다룹니다. |
+| `06-practice/` | Grafana 실습과 검증 절차를 둡니다. |
+| `90-standards/` | 문서 작성과 Grafana 운영 규칙을 다룹니다. |
+| `91-templates/` | 재사용 문서 템플릿을 둡니다. |
+| `99-agents/` | AI 작업 보조 프롬프트를 둡니다. |
 
-## 읽는 순서
-
-1. `install/install.md`
-2. `install/upgrade/`
-3. `datasource-guide.md`
-4. `dashboard-guide.md`
-5. `dashboard-design-guide.md`
-6. `variable-guide.md`
-7. `explore-guide.md`
-8. `alerting-guide.md`
-9. `provisioning-guide.md`
-10. `ha-lb-systemd-docker-guide.md`
-11. `slo-guide.md`
-12. `rules/README.md`
-13. `agents/README.md`
-14. `templates/README.md`
-
-## 관련 경로
-
-- `rules/`는 문서/운영 규칙
-- `agents/`는 Claude 작업 지침
-- `templates/`는 반복 문서 골격
-- `../ops/`는 Grafana Helm values와 provisioning 예시
+실행 가능한 예제와 운영 보조 자료는 [../ops/README.md](../ops/README.md)를 참고합니다.

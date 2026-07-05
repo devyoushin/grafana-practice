@@ -194,7 +194,7 @@ curl -s -X POST http://admin:admin@localhost:3000/api/dashboards/import \
   -d "{\"dashboard\": $(cat my-dashboard.json), \"overwrite\": true, \"folderId\": 0}"
 ```
 
-> 대시보드를 Git으로 관리하려면 [provisioning-guide.md](./provisioning-guide.md)를 참고하세요.
+> 대시보드를 Git으로 관리하려면 [provisioning-guide.md](../05-operations/provisioning-guide.md)를 참고하세요.
 
 ---
 

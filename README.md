@@ -4,7 +4,7 @@ EKS + Grafana 11.x 기준으로 데이터소스, 대시보드, 변수, Explore, 
 
 ## 빠른 시작
 
-- 처음 볼 문서: `docs/install/install.md`
+- 처음 볼 문서: `docs/01-installation/install.md`
 - 설치 방식: Helm / systemd / Docker Compose
 - 전체 흐름: 설치 -> 데이터소스 -> 대시보드/변수 -> Explore/Alerting -> Provisioning -> SLO/운영
 - AI 작업 지침: `CLAUDE.md`
@@ -30,7 +30,7 @@ grafana-practice/
 
 | 단계 | 문서 |
 |------|------|
-| 설치 | `docs/install/install.md` |
+| 설치 | `docs/01-installation/install.md` |
 | 핵심 개념 | `docs/datasource-guide.md`, `docs/dashboard-guide.md` |
 | 대시보드 | `docs/dashboard-design-guide.md`, `docs/variable-guide.md`, `docs/useful-dashboards.md` |
 | 쿼리/탐색 | `docs/promql-guide.md`, `docs/logql-guide.md`, `docs/explore-guide.md` |

@@ -300,7 +300,7 @@ curl -s -X PUT http://admin:admin@localhost:3000/api/v1/provisioning/alert-rules
   --data-binary @alert-rules-export.yaml
 ```
 
-> Provisioning 방식으로 Alert Rule을 코드로 관리하는 방법은 [provisioning-guide.md](./provisioning-guide.md)를 참고하세요.
+> Provisioning 방식으로 Alert Rule을 코드로 관리하는 방법은 [provisioning-guide.md](../05-operations/provisioning-guide.md)를 참고하세요.
 
 ---
 
